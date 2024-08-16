@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lora Tour and Travels CRM</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lora Tour and Travel Package CRM</h1>
+
+        <div class="form-section">
+            <h2>Client Details</h2>
+            <input type="text" id="clientName" placeholder="Client Name" required>
+            <input type="text" id="clientLocation" placeholder="Client Location" required>
+            <input type="tel" id="clientPhone" placeholder="Client Phone Number" required>
+
+            <h2>Tour Package Details</h2>
+            <input type="text" id="packageName" placeholder="Tour Package Name" required>
+            <input type="number" id="noOfDays" placeholder="Number of Days" required>
+            <input type="text" id="tourLocation" placeholder="Tour Location" required>
+
+            <h2>Flight Details</h2>
+            <select id="flightDetails">
+                <option value="None">Select Flight</option>
+                <option value="Flight 101 - Economy">Flight 101 - Economy</option>
+                <option value="Flight 102 - Business">Flight 102 - Business</option>
+                <option value="Flight 103 - First Class">Flight 103 - First Class</option>
+            </select>
+
+            <button id="addPackageBtn">Add Package</button>
+        </div>
+
+        <div class="package-list-section">
+            <h2>Tour Packages</h2>
+            <table id="packageList">
+                <thead>
+                    <tr>
+                        <th>Package Name</th>
+                        <th>Tour Location</th>
+                        <th>Days</th>
+                        <th>Flight Details</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Tour packages will be added here dynamically -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="print-section">
+            <button id="generatePDFBtn">Print Quotation as PDF</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script2.js"></script>
+</body>
+</html>
